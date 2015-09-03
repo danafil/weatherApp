@@ -1,0 +1,141 @@
+html {
+	font-size: 16px;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+html, body {
+	height: 100%;
+}
+.logo {
+	background: url(images/logoicon.png) 10% 50%;
+}
+h1 {
+	font-size: 2rem;
+	font-weight: 300;
+	margin: 10px 50px;
+	display: inline-block;
+}
+#inputCityName {
+	display: inline-block;
+	position: relative;
+    left: 250px;
+	vertical-align: middle;
+	border: none;
+	border-radius: 10px;
+	padding-left: 10px;
+	background: rgb(240,237,226);
+	background: -moz-linear-gradient(45deg, rgb(240,237,226) 0%, rgb(227,224,216) 16%, rgb(236,233,223) 32%, rgb(218,215,210) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgb(240,237,226)), color-stop(16%, rgb(227,224,216)), color-stop(32%, rgb(236,233,223)), color-stop(100%, rgb(218,215,210)));
+	background: -webkit-linear-gradient(45deg, rgb(240,237,226) 0%, rgb(227,224,216) 16%, rgb(236,233,223) 32%, rgb(218,215,210) 100%);
+	background: -o-linear-gradient(45deg, rgb(240,237,226) 0%, rgb(227,224,216) 16%, rgb(236,233,223) 32%, rgb(218,215,210) 100%);
+	background: -ms-linear-gradient(45deg, rgb(240,237,226) 0%, rgb(227,224,216) 16%, rgb(236,233,223) 32%, rgb(218,215,210) 100%);
+	background: linear-gradient(45deg, rgb(240,237,226) 0%, rgb(227,224,216) 16%, rgb(236,233,223) 32%, rgb(218,215,210) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0ede2', endColorstr='#dad7d2', GradientType=1 );
+}
+.top-menu {
+	display: inline-block;
+	vertical-align: middle;
+}
+ul.main-menu {
+    list-style: none;
+    display: table;
+    vertical-align: middle;
+    position: relative;
+    left: 300px;
+}
+ul.main-menu li {
+	display: table-cell;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+ul.main-menu li:last-child {
+	border: none;
+}
+ul.main-menu li a {
+	text-decoration: none;
+	color: #fff;
+}
+.wrapper {
+	min-height: 100%;
+}
+.header_group {
+	background:  url(../images/Logoicon.png) 97% 60% no-repeat #113f8e;
+	display: inline-block;
+	width: 100%;
+}
+.logo,.app_name {
+	color: white;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px;
+}
+
+/* === Таблиця погоди === */
+.forecast-wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 82.667em;
+}
+.forecast-wrapper ul.today {
+	list-style-type: none;
+	clear: both;
+}
+.forecast-wrapper ul.today li {
+    float: left;
+    width: 20%;
+    text-align: center;
+ }
+.forecast-wrapper ul.next-days {
+    max-width: 1240px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 1.5em;
+}
+.forecast-wrapper ul.next-days li span {
+    display: block;
+    color: white;
+}
+.forecast-wrapper a {
+	display: block;
+	text-decoration: none;
+	width: auto;
+}
+.forecast-wrapper ul.next-days li:nth-child(5n+1) {
+	background-color: #2949a6;
+}
+.forecast-wrapper ul.next-days li:nth-child(5n+2) {
+	background-color: #27418c;
+}
+.forecast-wrapper ul.next-days li:nth-child(5n+3) {
+	background-color: #26488c;
+}
+.forecast-wrapper ul.next-days li:nth-child(5n+4) {
+	background-color: #3b67bf
+}
+.forecast-wrapper ul.next-days li:nth-child(5n+5) {
+	background-color: #3973bf;
+}
+
+.forecast-wrapper ul.next-days li {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.icon {
+	padding-top: 1.4em;
+}
+.forecast-wrapper .icon {
+		position: relative;
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0.4em;
+		font-size: 1.8em;
+}	

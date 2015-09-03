@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Прогноз погоди</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/stylesheets.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header_group">
+			<h1 class="logo">ПОГ<img src="images/logo.png" alt="o" width="45px"></img>ДА</h1>
+			<input type="text" name="txtSearch" id="inputCityName" placeholder="Введіть місто" size="30">
+			<nav class=" top-menu">
+		 		<ul class="main-menu">
+		 			<li><a href="#">Карти</a></li>
+		 			<li><a href="#">Зворотній зв'язок</a></li>
+		 		</ul>
+		 	<nav>	
+		</header>
+		<article>
+		 	<section class="forecast-wrapper">
+			<ul class="today">
+				<li>Львів
+					 <p>Місто: <span id="location" ></span></p>
+					 <!--<table id="weatherTable">
+            			<tr>
+                		<th>Коли</th><th>Небо</th><th>Температура</th><th>Стан</th>
+            			</tr>
+        			</table>
+        			<p id="error"></p>-->
+				</li>
+				<li>Ранок</li>
+				<li>Обід</li>
+				<li>Вечір</li>
+				<li>Ніч</li>
+			</ul>      
+			<ul class="next-days">
+				<li class="next-day"><a href="#"><span class="icon" aria-hidden="true">
+				</span><span class="day">Вересень</span></a></li>
+				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+			</ul>
+		</section>
+		</article>
+	</div>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+        <script src="scripts/weatherService.js"></script>
+        <script src="scripts/weatherByCity.js"></script>
+        <script src="scripts/script.js"></script>
+</body>
+</html>
