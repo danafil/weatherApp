@@ -11,7 +11,10 @@
 	<div class="wrapper">
 		<header class="header_group">
 			<h1 class="logo">ПОГ<img src="images/logo.png" alt="o" width="45px"></img>ДА</h1>
-			<input type="text" name="txtSearch" id="inputCityName" placeholder="Введіть місто" size="30">
+			<form>
+				<input type="text" name="txtSearch" id="inputCityName" placeholder="Введіть місто" size="30">
+				<input type="button" name="btnGetWeather" id="btnGetWeather">
+			<form>
 			<nav class=" top-menu">
 		 		<ul class="main-menu">
 		 			<li><a href="#">Карти</a></li>
@@ -24,12 +27,12 @@
 			<ul class="today">
 				<li>Львів
 					 <p>Місто: <span id="location" ></span></p>
-					 <!--<table id="weatherTable">
+					 <table id="weatherTable">
             			<tr>
-                		<th>Коли</th><th>Небо</th><th>Температура</th><th>Стан</th>
-            			</tr>
-        			</table>
-        			<p id="error"></p>-->
+                	 	<th>Коли</th><th>Небо</th><th>Температура</th><th>Стан</th>
+            		 	</tr>
+        				</table>
+        			<p id="error"></p>
 				</li>
 				<li>Ранок</li>
 				<li>Обід</li>
