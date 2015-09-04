@@ -9,44 +9,59 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header class="header_group">
-			<h1 class="logo">ПОГ<img src="images/logo.png" alt="o" width="45px"></img>ДА</h1>
-			<form>
+		<header class="header_group row">
+			<h1 class="logo col-md-4">ПОГ<img src="images/logo.png" alt="o" width="45px"></img>ДА</h1>
+			<form class="col-md-4">
 				<input type="text" name="txtSearch" id="inputCityName" placeholder="Введіть місто" size="30">
-				<input type="button" name="btnGetWeather" id="btnGetWeather">
-			<form>
-			<nav class=" top-menu">
-		 		<ul class="main-menu">
+				<input type="button" name="cityName" id="btnGetWeather" value="Пошук">
+			</form>
+			<nav class="top-menu col-md-4">
+		 		<ul class="menu">
 		 			<li><a href="#">Карти</a></li>
 		 			<li><a href="#">Зворотній зв'язок</a></li>
 		 		</ul>
-		 	<nav>	
+		 	</nav>	
 		</header>
 		<article>
 		 	<section class="forecast-wrapper">
-			<ul class="today">
-				<li>Львів
-					 <p>Місто: <span id="location" ></span></p>
-					 <table id="weatherTable">
-            			<tr>
-                	 	<th>Коли</th><th>Небо</th><th>Температура</th><th>Стан</th>
-            		 	</tr>
-        				</table>
-        			<p id="error"></p>
-				</li>
-				<li>Ранок</li>
-				<li>Обід</li>
-				<li>Вечір</li>
-				<li>Ніч</li>
-			</ul>      
-			<ul class="next-days">
-				<li class="next-day"><a href="#"><span class="icon" aria-hidden="true">
-				</span><span class="day">Вересень</span></a></li>
-				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
-				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
-				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
-				<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
-			</ul>
+			 	<div class="row">
+					<ul class="today">
+						<li>Львів
+							 <p class="city"><span id="location" ></span></p>
+							 <table id="weatherTable">
+		            			<tr>
+		                	 	<th></th><th>Небо</th><th>Температура</th><th></th>
+		            		 	</tr>
+		        				</table>
+		        			<p id="error"></p>
+						</li>
+						<li>Ранок</li>
+						<li>Обід</li>
+						<li>Вечір</li>
+						<li>Ніч</li>
+					</ul>
+				</div> 
+			<div class="row horizontal">
+				<ul class="next-days weatherTable">
+					<li><a href="#"><span class="icon" aria-hidden="true">
+					</span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+					<li><a href="#"><span class="icon" aria-hidden="true"></span><span class="day">Вересень</span></a></li>
+
+				</ul>
+			</div>
 		</section>
 		</article>
 	</div>
