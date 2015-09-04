@@ -1,5 +1,6 @@
 function getWeatherData(lang, fnOK, fnError) {
     navigator.geolocation.getCurrentPosition(locSuccess, locError);
+    //locSuccess();
 
     function locSuccess(position) {
         // Check cache
@@ -9,9 +10,11 @@ function getWeatherData(lang, fnOK, fnError) {
         if(cache && cache.timestamp && cache.timestamp > currDate.getTime() - 30*60*1000){
             fnOK.call(this, cache.data);
         } else {
+            var request = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' +
+                position.coords.longitude + '&cnt=16&units=metric' + '&lang=' + lang + '&callback=?';
+            //var request = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=49.8500&lon=24.0167&cnt=16&units=metric' + '&lang=' + lang + '&callback=?';
             $.getJSON(
-                'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' +
-                position.coords.longitude + '&cnt=16&units=metric' + '&lang=' + lang + '&callback=?',
+                request,
                 function (response) {
                     // Store the cache
                     localStorage.weatherCache = JSON.stringify({
@@ -26,6 +29,12 @@ function getWeatherData(lang, fnOK, fnError) {
     }
 
     function locError(error) {
+        return locSuccess({
+            coords: {
+                latitude: 49.8500,
+                longitude: 24.0167
+            }
+        });
         var message = 'Location error. ';
         switch(error.code) {
             case error.TIMEOUT:
