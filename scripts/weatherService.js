@@ -27,7 +27,7 @@ function getWeatherData(lang, fnOK, fnError) {
             );
         }
     }
-
+    //api.openweathermap.org/data/2.5/weather?q={city name}
     function locError(error) {
         return locSuccess({
             coords: {

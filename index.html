@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Прогноз погоди</title>
+	<link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700|Didact+Gothic&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/stylesheets.css">
@@ -24,17 +25,24 @@
 		</header>
 		<article>
 		 	<section class="forecast-wrapper">
-			 	<div class="row">
-					<ul class="today">
-						<li>Львів
-							<p class="city"><span id="location" ></span></p>
-							<p id="error"></p>
-						</li>
-						<li>Ранок</li>
-						<li>Обід</li>
-						<li>Вечір</li>
-						<li>Ніч</li>
+			 	<div class="row today">
+	 				<p class="city"><span id="location" ></span></p>
+					<p>Сьогодні: <span id="today-icon"></span><p>
+					<ul id="condition-today">
+						<li id="condition"></li>
+						<li id="temp-max"></li>
+						<li id="temp-min"></li>
+						<li id="pressure"></li>
+						<li id="humidity"></li>
+						<li id="wind"></li>
 					</ul>
+					<ul id="weather-today">
+						<li id="morning"></li>
+						<li id="noon"></li>
+						<li id="eve"></li>
+						<li id="night"></li>
+					</ul>
+					<p id="error"></p>
 				</div> 
 			<div class="row horizontal">
 				<ul class="next-days" id="weatherTable"></ul>
@@ -43,7 +51,7 @@
 		</article>
 	</div>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+        <script src="scripts/moment-with-locales.js"></script>
         <script src="scripts/weatherService.js"></script>
         <script src="scripts/weatherByCity.js"></script>
         <script src="scripts/script.js"></script>
