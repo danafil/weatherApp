@@ -44,13 +44,19 @@ h1 {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0ede2', endColorstr='#dad7d2', GradientType=1 );
 }
 #btnGetWeather {
+	display: inline-block;
+	margin-top: 20px;
+	vertical-align: middle;
 	color: white;
 	background: #3b67bf;
 	border: 1px outset buttonface;
 	border-radius: 10px;
-	display: inline-block;
-	margin-top: 20px;
-	vertical-align: middle;
+}
+#btnGetWeather:hover {
+	color: #b2b3b6;
+}
+#btnGetWeather:active {
+	border: 1px inset buttonface;
 }
 .top-menu {
 	display: inline-block;
@@ -61,8 +67,6 @@ ul.menu {
     display: table;
     margin-top: 25px;
     vertical-align: middle;
-    /*position: relative;
-    left: 300px;*/
 }
 ul.menu li {
 	display: table-cell;
@@ -75,11 +79,18 @@ ul.menu li a {
 	text-decoration: none;
 	color: #fff;
 }
+ul.menu li a:hover {
+	text-decoration: underline;
+}
+ul.menu li a:active {
+	text-decoration: underline;
+	color: #b2b3b6;
+}
 .wrapper {
 	min-height: 100%;
 }
 .header_group {
-	background:  url(../images/Logoicon.png) 97% 60% no-repeat #113f8e;
+	background:  url(../images/Logoicon.png) 100% 60% no-repeat #0a3a82;
 	display: inline-block;
 	width: 100%;
 }
@@ -93,21 +104,75 @@ ul.menu li a {
     width: 100%;
     max-width: 82.667em;
 }
-.horizontal {
+div.today {
+	color: #7d7e7e;
+	font-size: 1.2em;
+}
+#location {
+	font-size: 1em;
+	font-weight: bold;	
+}
+.forecast-wrapper ul.condition-today {
+	list-style-type: none;
+	float: left;
+	width: 20%;
+}
+.forecast-wrapper ul.condition-today li {
+    vertical-align: middle;
+ }
+ #temp::before {
+ 	content: "";
+ 	width: 20px;
+    height: 20px;
+    float: left;
+ 	background: url("../images/thermometer.png") no-repeat;
+ }
+ #pressure::before {
+ 	content: "";
+ 	width: 20px;
+    height: 20px;
+    float: left;
+ 	background: url("../images/Pressure.png") no-repeat;
+ }
+ #humidity::before {
+ 	content: "";
+ 	width: 20px;
+    height: 20px;
+    float: left;
+ 	background: url("../images/drop.png") no-repeat;
+ }
+ #wind::before {
+ 	content: "";
+ 	width: 20px;
+    height: 20px;
+    float: left;
+ 	background: url("../images/wind.png") no-repeat;
+ }
+ ul.temp-today {
+   	display: table;
+ 	list-style-type: none;
+ }
+ ul.temp-today li {
+ 	display: table-cell;
+ 	width: 20%;
+ }
+ #morning::before {
+ 	content: "ранок ";
+ } 
+ #noon::before {
+ 	content: "обід ";
+ }
+ #eve::before {
+ 	content: "вечір ";
+  }
+ #night::before {
+ 	content: "ніч ";
+ }
+ .horizontal {
 	width: 100%;
     height: 200px;
     overflow: auto;
 }
-.forecast-wrapper ul.today {
-	list-style-type: none;
-	clear: both;
-}
-.forecast-wrapper ul.today li {
-    display: table-cell;
-    width: 20%;
-    vertical-align: middle;
-    text-align: center;
- }
 .forecast-wrapper ul.next-days {
     max-width: 1240px;
     margin: 0;
@@ -128,11 +193,6 @@ ul.menu li a {
 .forecast-wrapper ul.next-days li span {
     display: block;
     color: white;
-}
-.forecast-wrapper a {
-	display: block;
-	text-decoration: none;
-	width: auto;
 }
 .forecast-wrapper ul.next-days li:nth-child(5n+1) {
 	background-color: #2949a6;

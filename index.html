@@ -12,7 +12,7 @@
 	<div class="wrapper">
 		<header class="header_group row">
 			<h1 class="logo col-md-4">ПОГ<img src="images/logo.png" alt="o" width="45px"></img>ДА</h1>
-			<form class="col-md-4">
+			<form class="col-md-4" action="#">
 				<input type="text" name="txtSearch" id="inputCityName" placeholder="Введіть місто" size="30">
 				<input type="button" name="cityName" id="btnGetWeather" value="Пошук">
 			</form>
@@ -26,17 +26,16 @@
 		<article>
 		 	<section class="forecast-wrapper">
 			 	<div class="row today">
-	 				<p class="city"><span id="location" ></span></p>
+	 				<h2 class="city"><span id="location" ></span></h2>
 					<p>Сьогодні: <span id="today-icon"></span><p>
-					<ul id="condition-today">
+					<ul class="condition-today">
 						<li id="condition"></li>
-						<li id="temp-max"></li>
-						<li id="temp-min"></li>
+						<li id="temp"></li>
 						<li id="pressure"></li>
 						<li id="humidity"></li>
 						<li id="wind"></li>
 					</ul>
-					<ul id="weather-today">
+					<ul class="temp-today">
 						<li id="morning"></li>
 						<li id="noon"></li>
 						<li id="eve"></li>
@@ -44,10 +43,10 @@
 					</ul>
 					<p id="error"></p>
 				</div> 
-			<div class="row horizontal">
-				<ul class="next-days" id="weatherTable"></ul>
-			</div>
-		</section>
+				<div class="row horizontal">
+					<ul class="next-days" id="weatherTable"></ul>
+				</div>
+			</section>
 		</article>
 	</div>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
