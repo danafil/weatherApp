@@ -13,6 +13,16 @@ html, body {
 body {
 	font-family: 'Comfortaa';
 }	
+.wrapper {
+	height: 100%
+}
+.all {
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+article {
+	padding-bottom: 50px;
+}
 header.header_group {
 	margin: 0;
 }
@@ -157,16 +167,16 @@ div.today {
  	width: 20%;
  }
  #morning::before {
- 	content: "ранок ";
- } 
+ 	content: "ранок: ";
+ }
  #noon::before {
- 	content: "обід ";
+ 	content: "обід: ";
  }
  #eve::before {
- 	content: "вечір ";
+ 	content: "вечір: ";
   }
  #night::before {
- 	content: "ніч ";
+ 	content: "ніч: ";
  }
  .horizontal {
 	width: 100%;
@@ -225,3 +235,9 @@ div.today {
 		padding: 0.4em;
 		font-size: 1.5em;
 }	
+.last-element {
+	background-color: #7d7e7e;
+	color: #2847a3;
+	padding-left: 50px;
+	line-height: 50px;
+}

@@ -23,6 +23,7 @@ $(function(){
 
         var today = data.list[0];
         populateCurrentDay(
+            moment(new Date(today.dt*1000 - offset)).format('D MMMM YYYY'),
             today.weather[0].icon,
             Math.round(today.temp.day) + '&deg;C',
             today.temp.morn + '&deg;C',
@@ -60,7 +61,8 @@ $(function(){
         weatherTable.append(markup); // Додаємо рядок до таблиці
     }
 
-    function populateCurrentDay(icon, temp, morn, day, eve, night, pressure, humidity, wind, condition){
+    function populateCurrentDay(todayDate, icon, temp, morn, day, eve, night, pressure, humidity, wind, condition){
+        $('#today-date').html(todayDate);
         $('#today-icon').html(getIcon(icon));
         $('#temp').html(temp);
         $('#morning').html(morn);
