@@ -178,27 +178,29 @@ div.today {
  #night::before {
  	content: "ніч: ";
  }
- .horizontal {
+ .list-wrapper {
+ 	position: relative;
 	width: 100%;
-    height: 200px;
-    overflow: auto;
+    height: 250px;
+    overflow: hidden;
 }
 .forecast-wrapper ul.next-days {
-    max-width: 1240px;
+	position: relative;
+	left: 0;
     margin: 0;
     padding: 0;
     list-style-type: none;
     font-size: 1.2em;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
+    width: 300%;
+    height: 200px;
 }
 .forecast-wrapper ul.next-days li {
-	display: table-cell;
 	padding-top: 25px;
-    width: 200px;
+    width: 6.66%;
     height: 200px;
     vertical-align: middle;
+    text-align: center;
+    float: left;
     text-align: center;
 }
 .forecast-wrapper ul.next-days li span {
@@ -220,11 +222,6 @@ div.today {
 .forecast-wrapper ul.next-days li:nth-child(5n+5) {
 	background-color: #3871bc;
 }
-.forecast-wrapper ul.next-days li {
-    float: left;
-    width: 20%;
-    text-align: center;
-}
 .icon {
 	padding-top: 1.4em;
 }
@@ -235,6 +232,19 @@ div.today {
 		padding: 0.4em;
 		font-size: 1.5em;
 }	
+.navigator {
+	list-style-type: none;
+	width: 200px;
+	margin: 0 auto;
+}
+.navigator li {
+	float: left;
+	cursor: pointer;
+	width: 30%;
+}
+.navigator li.active{
+	color: red;
+}
 .last-element {
 	background-color: #7d7e7e;
 	color: #2847a3;

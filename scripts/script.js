@@ -48,6 +48,7 @@ $(function(){
 
         });
         $('#location').html(city + ', <b>' + country + '</b>'); // Додаємо локацію на сторінку
+        $('.list-wrapper').weatherCarousel();
     }
 
     function addWeather(icon, day, condition, temp){
