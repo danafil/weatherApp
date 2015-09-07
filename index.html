@@ -20,10 +20,22 @@
 				<nav class="top-menu col-md-4">
 			 		<ul class="menu">
 			 			<li><a href="#">Головна</a></li>
-			 			<li><a href="#">Зворотній зв'язок</a></li>
+			 			<li ><a href="#" id="contactUs">Зворотній зв'язок</a></li>
 			 		</ul>
-			 	</nav>	
-			</header>
+			 	</nav>
+			 	</header>
+			 	<div id="frmWrapper" class="invisible">
+				 	<form action="" id="frmContact" >
+					    <fieldset>
+					    	<legend><em>Ваше повідомлення</em></legend>	
+							<input type="text" name="txtName" placeholder="Ім'я" size="20"><br /><br />
+							<input type="e-mail" name="txtE-mail" placeholder="E-mail" size="20"><br /><br />
+							<textarea name="txtMessage" id="Message" placeholder="Повідомлення" cols="23" rows="4"></textarea></br>
+							<input type="submit" value="Відправити">
+							<input type="reset" value="Очистити форму">
+						</fieldset>
+					</form>
+				</div>
 			<article>
 			 	<section class="forecast-wrapper">
 				 	<div class="row today">
@@ -63,6 +75,6 @@
         <script src="scripts/moment-with-locales.js"></script>
         <script src="scripts/weatherService.js"></script>
         <script src="scripts/weatherByCity.js"></script>
-        <script src="scripts/script.js"></script>
+        <script src="scripts/script.js"></script>	
 </body>
 </html>

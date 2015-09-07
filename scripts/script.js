@@ -83,4 +83,8 @@ $(function(){
     function getIcon(icon){
         return '<img src="images/icons/'+ ( (icon === '10ddd')? '10d' : icon) +'.png" />';
     }
+
+    $( "#contactUs" ).click(function() {
+      $( "#frmWrapper" ).slideToggle( "slow" ).removeClass('invisible').addClass('visible');
+    });
 });

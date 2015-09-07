@@ -104,7 +104,21 @@ ul.menu li a:active {
 	display: inline-block;
 	width: 100%;
 }
-
+/*== Contact form == */
+#frmWrapper.invisible {
+	display: none;
+}
+.visible {
+	display: block;
+	position: absolute;
+	right: 50px;
+	width:400px;
+    padding: 10px 30px;
+    background-color: #C9CACC;
+	z-index: 2;
+	border: 1px solid grey;
+	border-radius: 5px;
+}
 /* === Таблиця погоди === */
 .forecast-wrapper {
 	position: absolute;
