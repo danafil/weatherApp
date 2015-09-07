@@ -28,7 +28,7 @@ header.header_group {
 }
 .logo {
 	color: white;
-	padding-left: 50px;
+	padding-left: 60px;
 }
 h1 {
 	font-size: 2rem;
@@ -114,6 +114,9 @@ ul.menu li a:active {
     width: 100%;
     max-width: 82.667em;
 }
+div.row {
+	margin-left: 0;
+}
 div.today {
 	color: #7d7e7e;
 	font-size: 1.2em;
@@ -130,7 +133,7 @@ span #today-date {
 	float: left;
 	width: 20%;
 	position: relative;
-    left: 130px;
+    left: 135px;
     top: -20px;
 }
 .forecast-wrapper ul.condition-today li {
@@ -177,6 +180,7 @@ span #today-date {
  ul.temp-today {
    	display: inline-block;
  	list-style-type: none;
+ 	margin-top: 8px;
  }
  ul.temp-today li {
  	float: left;
