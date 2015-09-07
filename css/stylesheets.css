@@ -185,9 +185,10 @@ span #today-date {
  ul.temp-today li {
  	float: left;
  	position: relative;
+ 	margin-left: 15px;
     top: -25px;
     left: 50px;
- 	width: 20%;
+ 	width: 15%;
  }
  #morning::before {
  	content: "ранок: ";
@@ -199,7 +200,7 @@ span #today-date {
  	content: "вечір: ";
   }
  #night::before {
- 	content: "ніч: ";
+ 	content: " ніч: ";
  }
  .list-wrapper {
  	position: relative;
