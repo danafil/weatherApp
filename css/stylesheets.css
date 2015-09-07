@@ -122,18 +122,31 @@ div.today {
 	font-size: 1em;
 	font-weight: bold;	
 }
+span #today-date {
+	font-weight: 300;
+}
 .forecast-wrapper ul.condition-today {
 	list-style-type: none;
 	float: left;
 	width: 20%;
+	position: relative;
+    left: 130px;
+    top: -20px;
 }
 .forecast-wrapper ul.condition-today li {
     vertical-align: middle;
+    margin-bottom: 5px;
+ }
+ #temp {
+ 	font-size: 2em;
+ 	font-weight: 300;
  }
  #temp::before {
  	content: "";
  	width: 20px;
-    height: 20px;
+    height: 25px;
+    margin-top: 12px;
+    margin-right: 5px;
     float: left;
  	background: url("../images/thermometer.png") no-repeat;
  }
@@ -141,6 +154,7 @@ div.today {
  	content: "";
  	width: 20px;
     height: 20px;
+    margin-right: 5px;
     float: left;
  	background: url("../images/Pressure.png") no-repeat;
  }
@@ -148,6 +162,7 @@ div.today {
  	content: "";
  	width: 20px;
     height: 20px;
+    margin-right: 5px;
     float: left;
  	background: url("../images/drop.png") no-repeat;
  }
@@ -155,15 +170,19 @@ div.today {
  	content: "";
  	width: 20px;
     height: 20px;
+    margin-right: 5px;
     float: left;
  	background: url("../images/wind.png") no-repeat;
  }
  ul.temp-today {
-   	display: table;
+   	display: inline-block;
  	list-style-type: none;
  }
  ul.temp-today li {
- 	display: table-cell;
+ 	float: left;
+ 	position: relative;
+    top: -25px;
+    left: 50px;
  	width: 20%;
  }
  #morning::before {
@@ -235,16 +254,26 @@ div.today {
 .navigator {
 	list-style-type: none;
 	width: 200px;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 .navigator li {
 	float: left;
 	cursor: pointer;
 	width: 30%;
+	height: 20px;
+	color: gray;
 }
-.navigator li.active{
-	color: red;
+.navigator li::before {
+	content: url("../images/navGreybtn.png");
+	width: 15px;
+	height: 15px;
 }
+.navigator li.active::before {
+	content: url("../images/navBluebtn.png");
+	color: #fff;
+	width: 15px;
+	height: 15px;
+}	
 .last-element {
 	background-color: #7d7e7e;
 	color: #2847a3;
